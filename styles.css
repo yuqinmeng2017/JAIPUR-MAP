@@ -29,8 +29,9 @@ h1, h2 {
     padding: 3px 6px;
 }
 
-h3 { color: #ffffff; }
-h4, h5, h6 { color: #6E8F60; }
+h3 { color: #6E8F60; }
+h4 { color: #ffffff; }
+h5, h6 { color: #6E8F60; }
 
 a { color: #6E8F60; }
 a:hover { color: #f00; }

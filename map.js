@@ -2,7 +2,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoieXVxaW5tZW5nMjAxNyIsImEiOiJjamc4ZnBpdjcxMDRmMnhxbDN0bHRiamNpIn0.8dW5tp4Ek1dn7GJvSchfqg'; 
 var map = new mapboxgl.Map({
 	container: 'map',   
-	style: 'mapbox://styles/yuqinmeng2017/ck315zjpu0kgf1cpazr3rel2e',
+	style: 'mapbox://styles/yuqinmeng2017/ck31xdmzt2bym1cpmlylgirhp',
 
 });
 
@@ -51,7 +51,24 @@ var map = new mapboxgl.Map({
 // 4. Info window 
 // See example tutorial at https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-2/#add-the-information-window
 
-  
+   map.on('mousemove', function(e) {   // Event listener to do some code when the mouse moves, see https://www.mapbox.com/mapbox-gl-js/api/#events. 
+
+        var parks = map.queryRenderedFeatures(e.point, {    
+            layers: ['jaipur-zones']    // replace 'cville-parks' with the name of the layer you want to query (from your Mapbox Studio map, the name in the layers panel). For more info on queryRenderedFeatures, see the example at https://www.mapbox.com/mapbox-gl-js/example/queryrenderedfeatures/. Documentation at https://www.mapbox.com/mapbox-gl-js/api/#map#queryrenderedfeatures.
+        });
+              
+        if (parks.length > 0) {   // if statement to make sure the following code is only added to the info window if the mouse moves over a state
+
+            $('#info-window-body').html('<h3><strong>Zone Name: ' + parks[0].properties.Zone_Name + '</strong></h3><p>Total Ward:' + parks[0].properties.Total_Ward + '</p>');
+
+        } else {    // what shows up in the info window if you are NOT hovering over a park
+
+            $('#info-window-body').html('<p>Hover over a zone to learn more about it.');
+            
+        }
+
+    });
+
 
 
 // -------------------------------------------------------- 
@@ -84,7 +101,7 @@ var map = new mapboxgl.Map({
       popup.setLngLat(clinic[0].geometry.coordinates);
 
       // Set the contents of the popup window
-      popup.setHTML('<h3>Clinic District: ' + clinic[0].properties.District + '</h3><p>' + clinic[0].properties.Name_of_Cl + '</p>');
+      popup.setHTML('<h4>Clinic name: ' + clinic[0].properties.Name_of_Cl + '</h4><h4>Address: ' + clinic[0].properties.Local_Addr + '</h4>');
             // stops[0].properties.stop_id will become the title of the popup (<h3> element)
             // stops[0].properties.stop_name will become the body of the popup
 

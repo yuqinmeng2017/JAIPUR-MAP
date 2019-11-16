@@ -1,16 +1,17 @@
 <html>
 
 <head>
-  <title>My Mapbox GL JS Map</title>
+  <title>JAIPUR MAP</title>
 
   <!-- Link to JQuery library (used for modal) -->  
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
   <!-- Link to Mapbox GL JS library --> 
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+
 
   <!-- Link to Mapbox GL JS css stylesheet -->  
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 
   <!-- Add Google Fonts support -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -22,13 +23,6 @@
   <link rel="stylesheet" href="styles.css">
 
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="./Carousel Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./Carousel Template for Bootstrap_files/carousel.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,14 +30,14 @@
   <!-- Map sidebar --> 
   <div id="sidebar">
     <div>
-      <h1 class='page-title'>Explore Charlottesville</h1>
+      <h1 class='page-title'>JAIPUR HEALTHCARE FACILITIES</h1>
       <!-- About this map button -->
       <button id="about" class='button-default'><i class="fas fa-question-circle"></i>&nbsp;About this map</button>
       <!-- Info window (populated by javascript code from the Mapbox map layers) -->
       <div id='info-window'>
         <div>
           <div id='info-window-body'>
-            <p>Hover over a park or click on a bus stop to learn more about it.</p>
+            <p>Hover over a hospital to learn more about it.</p>
           </div>
         </div>
       </div>
@@ -61,16 +55,10 @@
     <div id='map-sidebar'>
       <!-- Layers control (populated by javascript code) -->
       <div id='layers-control'>
-        <h3>Show/Hide Layers:</h3>
+        <h4>Show/Hide Layers:</h4>
       </div>
 
-      <!-- color change selector -->
-      <div id='color-changer'>
-        <div>
-          <label>Bus Stop Color:</label>
-          <div id='swatches'></div>
-        </div>
-      </div>
+    
 
       <!-- Map legend (populated by javascript code) -->
       <div id='legend'></div>

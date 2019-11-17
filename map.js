@@ -1,8 +1,12 @@
 
+var mapCenter = [75.81246, 26.91978];
+var mapZoom = 11;
+
+
 mapboxgl.accessToken = 'pk.eyJ1IjoieXVxaW5tZW5nMjAxNyIsImEiOiJjamc4ZnBpdjcxMDRmMnhxbDN0bHRiamNpIn0.8dW5tp4Ek1dn7GJvSchfqg'; 
 var map = new mapboxgl.Map({
 	container: 'map',   
-	style: 'mapbox://styles/yuqinmeng2017/ck31xdmzt2bym1cpmlylgirhp',
+	style: 'mapbox://styles/yuqinmeng2017/ck3394e4v00fk1cn6adcfztyk',
 
 });
 
@@ -291,7 +295,7 @@ var map = new mapboxgl.Map({
         map.setZoom(mapZoom);
         map.setPitch(0);
         map.setBearing(0);
-        map.setFilter("cville-building-permits", null); // reset building permits filters
+        map.setFilter("clinic", null); // reset building permits filters
         
         // Reset all layers to visible
         for (i=0; i<layers.length; i++) {

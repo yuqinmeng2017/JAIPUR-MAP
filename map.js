@@ -6,7 +6,7 @@ var mapZoom = 11;
 mapboxgl.accessToken = 'pk.eyJ1IjoieXVxaW5tZW5nMjAxNyIsImEiOiJjamc4ZnBpdjcxMDRmMnhxbDN0bHRiamNpIn0.8dW5tp4Ek1dn7GJvSchfqg'; 
 var map = new mapboxgl.Map({
 	container: 'map',   
-	style: 'mapbox://styles/yuqinmeng2017/ck3394e4v00fk1cn6adcfztyk',
+	style: 'mapbox://styles/yuqinmeng2017/ck3nr96up5utr1cmnvyxxqx25',
 
 });
 
@@ -127,8 +127,9 @@ var map = new mapboxgl.Map({
         // [layerMachineName, layerDisplayName]
         // layerMachineName is the layer name as written in your Mapbox Studio map layers panel
         // layerDisplayName is the way you want the layer's name to appear in the layers control on the website
+        ['all-health-facilities', 'Healthcare accessibility'],
         ['public-hospital', 'Public Hospital'],                      // layers[0]
-        ['national-park', 'National Park'],                              // layers[1][1] = 'Parks'
+                                                                 // layers[1][1] = 'Parks'
         ['private-hospital', 'Private Hospital'],     
         ['clinic', 'Clinic'],
         ['water', 'Water Body']
@@ -200,16 +201,20 @@ var map = new mapboxgl.Map({
         'darden-towe': {
             name: "Clinic typology",
             description: "Anganwadi is a type of rural child care centre in India. They were started by the Indian government in 1975 as part of the Integrated Child Development Services program to combat child hunger and malnutrition. Anganwadi means courtyard shelter in Indian languages.",
-            imagepath: "img/Clinic typology.jpg",
-             center: [75.80389, 26.91314],
-             zoom: 12.36,
+         
+            imagepath: "img/Anganwadi_Worker_AWW_Distributing_Dresses_to_childrens.jpg",
+             center: [75.63082, 26.98873],
+             zoom: 15.00,
              pitch: 49.00,
              bearing: -2.29
         },
         'mcguffey-park': {
             name: "Private hospital typology",
-            description: "Aliquam mollis consequat libero, at egestas mi facilisis in. Maecenas sed porta arcu, nec mattis ligula. Sed a porta arcu. Aliquam vel nulla ac orci volutpat ullamcorper. Duis quis auctor urna. Duis id felis vel velit sagittis bibendum. Praesent rutrum velit vel est iaculis, et viverra sapien placerat. Suspendisse potenti. In interdum eu lorem ac cursus. Integer pulvinar lacus nec metus consequat vehicula. Aliquam efficitur vitae neque sed aliquam. Fusce interdum tempor neque vel interdum. Praesent dapibus sollicitudin arcu id finibus. Mauris risus magna, egestas in tristique et, egestas id arcu. Proin leo urna, sollicitudin non mattis in, tempor non nisi. Praesent commodo nibh sit amet dapibus egestas.",
-            imagepath: "img/Private hospital typology.jpg",
+            description: "As a specialty hospital, Apollo Spectra gives you the advantage of expert and quality healthcare with all the benefits of a large hospital but in a friendlier, more accessible facility. This is what makes us unique.With 12 Centres across 9 cities: Bengaluru, Chennai, Delhi, Jaipur, Kanpur, Mumbai, Hyderabad, Gwalior and Pune, over 71659+ successful surgeries with excellent clinical outcomes, and over 700 leading doctors, Apollo Spectra Hospitals continue to set new standards in healthcare services.",
+           
+            imagepath: "img/apollo-spectra-hospitals-chunni-ganj-kanpur-hospitals-11juorl.jpg",
+
+
             center: [75.81702, 26.90729],
             zoom: 14.16,
             pitch: 45.00,
@@ -217,8 +222,8 @@ var map = new mapboxgl.Map({
         },
         'mcintire-park': {
             name: "Public hospital typology",
-            description: "Fusce iaculis nulla ut augue posuere, sit amet vestibulum quam elementum. Integer quis varius sem. Mauris fermentum tempus congue. Nulla facilisi. Vestibulum congue cursus tempor. Sed sit amet venenatis magna. Duis fermentum ligula eget auctor eleifend. Aenean ullamcorper arcu et diam pharetra, a pretium lectus porttitor. Donec non lacinia est. Nullam nec felis turpis. Curabitur hendrerit porta dolor, vitae vehicula est dictum id. Ut sollicitudin lectus est, et egestas felis tempus eu. Sed at dictum ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam et diam rutrum orci placerat euismod quis vitae dui. Praesent aliquam, quam ac suscipit laoreet, metus nulla mattis justo, et egestas lectus eros ac nulla.",
-            imagepath: "img/Public hospital typology.jpg",
+            description: "n Jaipur, Imperial Hospital is a recognized name in patient care. It was incepted in the year 2003. They are one of the well-known Multispeciality Hospitals in Shastri Nagar. Backed with a vision to offer the best in patient care and equipped with technologically advanced healthcare facilities, they are one of the upcoming names in the healthcare industry. Located in , this hospital is easily accessible by various means of transport. A team of well-trained medical staff, non-medical staff and experienced clinical technicians work round-the-clock to offer various services that include Visitor\\\\\\\'s Timings 00:00 To 00:00, Pathology Lab , Xray , Sonography , Ct Scan , Casualty , I.c.c.u. , Cafeteria , Atm Facility , Chemist , Ambulance Service , Internet Facility , Health Checkup Scheme , National Insurance , New India Assurance , Icici Lombard , Bajaj Alliance . Their professional services make them a sought after Multispeciality Hospitals in Jaipur. A team of doctors on board, including specialists are equipped with the knowledge and expertise for handling various types of medical cases. Visit their official website here www.imperialhospitalindia.com to know more about them and their services.",
+            imagepath: "img/kansal-skin-child-care-centre-jaipur-1467887734-577e307637ebc.jpg",
            center: [75.79721, 26.94436],
             zoom: 13.72,
             pitch: 45.00,
